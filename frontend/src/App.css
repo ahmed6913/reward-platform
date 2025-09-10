@@ -1,0 +1,16 @@
+/* Custom color using HSL 20.5 90.2% 48.2% */
+.bg-custom-orange {
+  background-color: hsl(20.5, 90.2%, 48.2%);
+}
+
+.text-custom-orange {
+  color: hsl(20.5, 90.2%, 48.2%);
+}
+
+.hover\:bg-custom-orange-dark:hover {
+  background-color: hsl(20.5, 90.2%, 42%);
+}
+
+.hover\:text-custom-orange:hover {
+  color: hsl(20.5, 90.2%, 48.2%);
+}
