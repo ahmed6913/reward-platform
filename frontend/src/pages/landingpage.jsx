@@ -1,7 +1,27 @@
+import { useState, useEffect } from 'react'
 import arImage from '../assets/ar.png'
 import PricingSection from '../components/page-section'
 
 const LandingPage = () => {
+    const [showScrollTop, setShowScrollTop] = useState(false)
+
+    // Show/hide scroll to top button based on scroll position
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 300)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
+    // Scroll to top function
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
     return (
         <div>
             {/* Hero Section - Full Screen */}
@@ -149,7 +169,7 @@ const LandingPage = () => {
                     <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-200">
                         <div className="grid text-center grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center">
 
-                            
+
 
                         </div>
 
@@ -170,6 +190,57 @@ const LandingPage = () => {
             <PricingSection />
 
             {/* Footer */}
+
+            <footer className="bg-gray-100 text-white rounded-xl py-12 px-4">
+                <div className="max-w-6xl rounded-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {/* Company Info */}
+                    <div className="mb-8 md:mb-0">
+                        <h3 className="text-black text-2xl font-bold mb-4">RP</h3>
+                        <p className="text-gray-600"> RP offers solutions across alternative rewards—gift cards, cashback, loyalty points and
+                            experiences—delivering deep expertise.</p>
+                    </div>
+
+                    {/* Quick Links */}
+                    <div className="mb-8 md:mb-0">
+                        <h3 className="text-black text-2xl font-bold mb-4">Quick Links</h3>
+                        <ul className="text-gray-600">
+                            <li className="mb-2"><a href="#" className="hover:text-orange-500">Home</a></li>
+                            <li className="mb-2"><a href="#" className="hover:text-orange-500">About</a></li>
+                            <li className="mb-2"><a href="#" className="hover:text-orange-500">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div>
+                        <h3 className="text-black text-2xl font-bold mb-4">Contact Us</h3>
+                        <p className="text-gray-600 mb-4">Address: Al asimah kuwait, Kuwait city </p>
+                        <p className="text-gray-600 mb-4">Email: shaikhsaim777121@gmail.com </p>
+                        <p className="text-gray-600">Phone: +965 60765823 </p>
+                    </div>
+                </div>
+
+                {/* Copyright */}
+                <div className="max-w-6xl mx-auto mt-8 pt-8 border-t border-gray-300 text-center">
+                    <p className="font-bold text-gray-600">All rights reserved by shaikhsaim @2025</p>
+                </div>
+            </footer>
+
+            {/* Scroll to Top Button */}
+            {showScrollTop && (
+                <button
+                    onClick={scrollToTop}
+                    className="fixed bottom-8 right-8 bg-orange-500 text-white p-4 rounded-full shadow-lg hover:bg-orange-600 transform hover:scale-110 transition-all duration-300 z-50"
+                    aria-label="Scroll to top"
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                    </svg>
+                </button>
+            )}
+
+
+
+
         </div>
     )
 }
