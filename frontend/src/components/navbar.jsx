@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Navbar() {
+ function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -83,3 +83,5 @@ export function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;
