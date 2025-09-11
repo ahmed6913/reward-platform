@@ -1,5 +1,4 @@
-
-import lpuiImage from '../assets/lpui.png'
+import arImage from '../assets/ar.png'
 import PricingSection from '../components/page-section'
 
 const LandingPage = () => {
@@ -48,8 +47,8 @@ const LandingPage = () => {
             <section className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-2">
                 <div className="max-w-4xl mx-auto text-center">
                     <img
-                        src={lpuiImage}
-                        alt="Landing Page UI"
+                        src={arImage}
+                        alt="AR Landing Page"
                         className="w-full max-w-2xl mx-auto rounded-2xl shadow-xl object-cover h-auto"
                     />
                 </div>
@@ -122,19 +121,16 @@ const LandingPage = () => {
 
                         {/* Call to Action */}
                         <div className="text-center mt-12">
-                            <button className="bg-orange-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            <button className="bg-orange-500 text-white px-10 py-4 rounded-full fontxt-lg ver:bg-orang00 transform hover:scale-105 transition-all duration-300 shadow-lg">
                                 Start Earning Now
                                 <svg className="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
-
                             </button>
                         </div>
                     </div>
                 </div>
             </section>
-
-
 
             {/* Partners Section */}
             <section className="bg-gray-50 py-20 px-4">
@@ -144,14 +140,16 @@ const LandingPage = () => {
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Trusted by Leading <span className="text-orange-500">Partners</span>
                         </h2>
-
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Join Us Today
+                        </p>
                     </div>
 
                     {/* Partners Container */}
                     <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-200">
                         <div className="grid text-center grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center">
 
-                            {/* Partner 1 - Freshii */}
+                            
 
                         </div>
 
@@ -160,43 +158,18 @@ const LandingPage = () => {
                             <button className="bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
                                 Become a Partner
                                 <svg className="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </button>
                         </div>
-
                     </div>
                 </div>
             </section>
 
-            {/* Subcription */}
-
-
+            {/* Subscription */}
             <PricingSection />
 
-
-
             {/* Footer */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     )
 }

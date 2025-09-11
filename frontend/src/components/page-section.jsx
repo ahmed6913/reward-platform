@@ -5,10 +5,10 @@ export default function PricingSection() {
         <section className="py-16 px-4 max-w-6xl mx-auto">
             <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Choose Your <span className="text-orange-500">Plan</span>
+                    Choose Your <span className="text-orange-500">Plan (for business)</span>
                 </h2>
                 <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                    Select the perfect subscription plan that fits your needs.
+                    Select the perfect subscription plan that fits your business needs.
                 </p>
             </div>
 
