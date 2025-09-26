@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
- function Navbar() {
+function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -26,16 +27,17 @@ import { useState } from "react";
             <a href="#contact" className="text-gray-600 hover:text-orange-500 transition-colors text-base">
               Contact
             </a>
-            <a href="#login" className="text-gray-800 hover:text-orange-500 transition-colors font-medium text-base text-lg ">
+            <Link to="/login" className="text-gray-800 hover:text-orange-500 transition-colors font-medium text-base text-lg ">
               Login
-            </a>
+            </Link>
           </div>
 
           {/* sign up button - Right side */}
           <div className="hidden md:block">
-            <button className="bg-orange-500 text-white px-4 py-2 rounded-full font-medium hover:bg-orange-600 transition-colors flex items-center gap-2">
+
+            <Link to="/signup" className="bg-orange-500 text-white px-4 py-2 rounded-full font-medium hover:bg-orange-600 transition-colors flex items-center gap-2">
               Sign Up
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -68,13 +70,13 @@ import { useState } from "react";
               <a href="#contact" className="block px-3 py-2 text-gray-600 hover:text-orange-500">
                 Contact
               </a>
-              <a href="#login" className="block px-3 py-2 text-gray-600 hover:text-orange-500">
+              <Link to="/login" className="block px-3 py-2 text-gray-600 hover:text-orange-500">
                 Login
-              </a>
+              </Link>
               <div className="flex justify-center mt-2">
-                <button className="bg-orange-500 text-white px-3 py-2 rounded-md font-medium hover:bg-orange-600">
+                <Link to="/signup" className="bg-orange-500 text-white px-3 py-2 rounded-md font-medium hover:bg-orange-600">
                   Sign Up
-                </button>
+                </Link>
               </div>
             </div>
           </div>
